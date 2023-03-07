@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>小蛋糕</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="动态路由协议动态路由​	基于某种路由协议实现 动态路由特点​	减少了管理任务 ​	占用了网络带宽 动态路由协议概述​	路由器之间用来交换信息的语言 度量值​	跳数、带宽、负载、时延、可靠性、成本   按照路由执行的算法分类​	距离矢量路由协议 ​		依据从源网络到目标网络所经过的路由器的个数选择路由 ​		RIP、IGRP ​	链路状态路由协议 ​		综合考虑从源网络到目标网络的各条路径的情况选择">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小蛋糕">
+<meta property="og:url" content="http://example.com/2023/03/07/%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE/index.html">
+<meta property="og:site_name" content="小蛋糕">
+<meta property="og:description" content="动态路由协议动态路由​	基于某种路由协议实现 动态路由特点​	减少了管理任务 ​	占用了网络带宽 动态路由协议概述​	路由器之间用来交换信息的语言 度量值​	跳数、带宽、负载、时延、可靠性、成本   按照路由执行的算法分类​	距离矢量路由协议 ​		依据从源网络到目标网络所经过的路由器的个数选择路由 ​		RIP、IGRP ​	链路状态路由协议 ​		综合考虑从源网络到目标网络的各条路径的情况选择">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230213134153624.png">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230213223051064.png">
+<meta property="article:published_time" content="2023-03-07T01:55:58.219Z">
+<meta property="article:modified_time" content="2023-02-13T14:35:46.582Z">
+<meta property="article:author" content="wk">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230213134153624.png">
+  
+    <link rel="alternate" href="/atom.xml" title="小蛋糕" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小蛋糕</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-动态路由协议" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/03/07/%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE/" class="article-date">
+  <time class="dt-published" datetime="2023-03-07T01:55:58.219Z" itemprop="datePublished">2023-03-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="动态路由协议"><a href="#动态路由协议" class="headerlink" title="动态路由协议"></a>动态路由协议</h1><h4 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h4><p>​	基于某种路由协议实现</p>
+<h4 id="动态路由特点"><a href="#动态路由特点" class="headerlink" title="动态路由特点"></a>动态路由特点</h4><p>​	减少了管理任务</p>
+<p>​	占用了网络带宽</p>
+<h4 id="动态路由协议概述"><a href="#动态路由协议概述" class="headerlink" title="动态路由协议概述"></a>动态路由协议概述</h4><p>​	路由器之间用来交换信息的语言</p>
+<h4 id="度量值"><a href="#度量值" class="headerlink" title="度量值"></a>度量值</h4><p>​	跳数、带宽、负载、时延、可靠性、成本</p>
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230213134153624.png" alt="image-20230213134153624"></p>
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230213223051064.png" alt="image-20230213223051064"></p>
+<h4 id="按照路由执行的算法分类"><a href="#按照路由执行的算法分类" class="headerlink" title="按照路由执行的算法分类"></a>按照路由执行的算法分类</h4><p>​	距离矢量路由协议</p>
+<p>​		依据从源网络到目标网络所经过的路由器的个数选择路由</p>
+<p>​		RIP、IGRP</p>
+<p>​	链路状态路由协议</p>
+<p>​		综合考虑从源网络到目标网络的各条路径的情况选择路由</p>
+<p>​		OSPF、IS-IS</p>
+<h4 id="RIP是距离-矢量路由选择协议（默认更新时间30s一次）"><a href="#RIP是距离-矢量路由选择协议（默认更新时间30s一次）" class="headerlink" title="RIP是距离-矢量路由选择协议（默认更新时间30s一次）"></a>RIP是距离-矢量路由选择协议（默认更新时间30s一次）</h4><p>RIP的基本概念</p>
+<p>​	定期更新</p>
+<p>​	邻居</p>
+<p>​	广播更新</p>
+<p>​	全路由表更新</p>
+<h5 id="RIP度量值为跳数"><a href="#RIP度量值为跳数" class="headerlink" title="RIP度量值为跳数"></a>RIP度量值为跳数</h5><p>​	最大跳数为15跳，16跳为不可达</p>
+<h5 id="RIP更新时间"><a href="#RIP更新时间" class="headerlink" title="RIP更新时间"></a>RIP更新时间</h5><p>​	每隔30s发送路由更新消息，UDP520端口</p>
+<h5 id="RIP路由更新消息"><a href="#RIP路由更新消息" class="headerlink" title="RIP路由更新消息"></a>RIP路由更新消息</h5><p>​	发送整个路由表信息</p>
+<h5 id="执行水平分割可以阻止路由环路的发生"><a href="#执行水平分割可以阻止路由环路的发生" class="headerlink" title="执行水平分割可以阻止路由环路的发生"></a>执行水平分割可以阻止路由环路的发生</h5><p>​	从一个接口学习到路由信息，不再从这个接口发出去</p>
+<p>​	同时也能减少路由更新信息占用的链路带宽资源</p>
+<p>命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">router rip</span><br><span class="line">	version 1</span><br><span class="line">	network 10.0.0.0</span><br><span class="line">	network 20.0.0.0</span><br><span class="line">	exit</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">router rip</span><br><span class="line">	version 2</span><br><span class="line">	no auto-summary  //取消自动汇总，否则自己确定几类地址，30.1.1.1和30.2.2.2发两个，一通一不通</span><br><span class="line">	network 10.0.0.0</span><br><span class="line">	network 20.0.0.0</span><br><span class="line">	exit</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/03/07/%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE/" data-id="clexlpz57000fycvf19lj4tft" data-title="" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/03/07/%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/03/07/%E6%89%AB%E6%8F%8F%E4%B8%8E%E7%88%86%E7%A0%B4/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/03/07/%E5%9F%9F/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%EF%BC%882%E5%B1%82%20Data%20Link%20Layer%EF%BC%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88cifs%E5%8D%8F%E8%AE%AE%EF%BC%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 wk<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

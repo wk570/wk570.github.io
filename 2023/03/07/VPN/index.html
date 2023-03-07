@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>小蛋糕</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="VPN1.VPN（Virtual Private Network） ​	虚拟专有网络 ​	虚拟专网 2.引入 ​	VPN可以实现在不安全的网络上，安全的传输数据，好像专网；VPN只是一个技术，使用PKI技术，来保证数据的安全三要素 3.安全三要素： ​	1）机密性 ​	2）完整性 ​	3）身份验证 4.加密技术： ​	1）对称加密：加密与解密使用相同的密钥 ​							 密钥是通信双方协商生成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小蛋糕">
+<meta property="og:url" content="http://example.com/2023/03/07/VPN/index.html">
+<meta property="og:site_name" content="小蛋糕">
+<meta property="og:description" content="VPN1.VPN（Virtual Private Network） ​	虚拟专有网络 ​	虚拟专网 2.引入 ​	VPN可以实现在不安全的网络上，安全的传输数据，好像专网；VPN只是一个技术，使用PKI技术，来保证数据的安全三要素 3.安全三要素： ​	1）机密性 ​	2）完整性 ​	3）身份验证 4.加密技术： ​	1）对称加密：加密与解密使用相同的密钥 ​							 密钥是通信双方协商生成">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230215192702667.png">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230215192726954.png">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230226143831520.png">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230226144524462.png">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230226144845095.png">
+<meta property="article:published_time" content="2023-03-07T01:55:58.203Z">
+<meta property="article:modified_time" content="2023-02-26T06:50:05.836Z">
+<meta property="article:author" content="wk">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230215192702667.png">
+  
+    <link rel="alternate" href="/atom.xml" title="小蛋糕" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小蛋糕</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-VPN" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/03/07/VPN/" class="article-date">
+  <time class="dt-published" datetime="2023-03-07T01:55:58.203Z" itemprop="datePublished">2023-03-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h1><p>1.VPN（Virtual Private Network）</p>
+<p>​	虚拟专有网络</p>
+<p>​	虚拟专网</p>
+<p>2.引入</p>
+<p>​	VPN可以实现在不安全的网络上，安全的传输数据，好像专网；VPN只是一个技术，使用PKI技术，来保证数据的安全三要素</p>
+<p>3.安全三要素：</p>
+<p>​	1）机密性</p>
+<p>​	2）完整性</p>
+<p>​	3）身份验证</p>
+<p>4.加密技术：</p>
+<p>​	1）对称加密：加密与解密使用相同的密钥</p>
+<p>​							 密钥是通信双方协商生成，生成过程是明文通信</p>
+<p>​	2）非对称加密算法：使用公私钥加密数据</p>
+<p>​										 公私钥成对生成，互为加解密关系</p>
+<p>​										 公私钥不能互相推算</p>
+<p>​										 双方交换公钥</p>
+<p>​										 使用对方的公钥加密实现机密性</p>
+<p>​										 使用自己的私钥进行签名，实现身份验证</p>
+<p>5.完整性算法&#x2F;hash值算法：</p>
+<p>​	MD5</p>
+<p>​	SHA</p>
+<p>6.VPN的类型：</p>
+<p>​	1）远程访问VPN</p>
+<p>​				一般用在个人到安全连接企业内部</p>
+<p>​				一般出差员工&#x2F;在家办公，安全连接内网时使用</p>
+<p>​				一般公司部署VPN服务器，员工在外拨号连接VPN即可</p>
+<p>​				常见RA-VPN协议：PPTP VPN、L2TP VPN、SSTP VPN</p>
+<p>​													EZvpn&#x2F;easyvpn、SSL VPN</p>
+<p>​	2）点到点VPN</p>
+<p>​				一般用在企业对企业安全连接	</p>
+<p>​				一般需要在两个企业总出口设备之间建立VPN通道</p>
+<p>​				常见的点到点VPN：IPsecVPN</p>
+<p>7.IPsecVPN：</p>
+<p>​	1）属于点到点VPN，可以在2家企业之间建立VPN隧道</p>
+<p>​	2）VPN隧道优点：安全性</p>
+<p>​									 合并两家企业内网</p>
+<p>​	3）VPN隧道技术：</p>
+<p>​			1）传输模式：只加密上层数据，不加密私有IP包头，速度款</p>
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230215192702667.png" alt="image-20230215192702667"></p>
+<p>​			2）隧道模式：加密整个私有IP包，包括IP包头，更安全，速度慢</p>
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230215192726954.png" alt="image-20230215192726954"></p>
+<p>​	4）VPN隧道技术：重新封装技术+加密认证技术</p>
+<p>​	5）IPsecVPN分为2大阶段：</p>
+<p>​		第一阶段：管理连接</p>
+<p>​		目的：通信双方设备通过非对称加密算法加密堆成加密算法所使用的对称密钥</p>
+<p>​		命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">conf t   (IKE)</span><br><span class="line">crypto isakmp policy 1   （传输集/策略集）</span><br><span class="line">	encryption des/3des/aes</span><br><span class="line">	hash md5/sha</span><br><span class="line">	group 1/2/5</span><br><span class="line">	authentication pre-share</span><br><span class="line">	lifetime 秒			（默认86400秒/24小时）</span><br><span class="line">	exit</span><br><span class="line">crypto isakmp key 预共享密钥 address 对方的公网IP地址</span><br></pre></td></tr></table></figure>
+
+<p>​		第二阶段：数据连接</p>
+<p>​		目的：通过对称加密算法加密实际所要传输的私网数据</p>
+<p>定义VPN触发流量：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">access-list 100 permit ip 192.168.0.0 0.0.255.255 172.16.0.0 0.0.255.255</span><br></pre></td></tr></table></figure>
+
+<p>定义加密方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crypto ipsec transform-set 传输模式名  esp/ah-des/3des/aes esp/ah-md5/sha-hmac</span><br></pre></td></tr></table></figure>
+
+<p>ESP：支持加密及认证（身份验证+完整性）</p>
+<p>AH：只支持认证（身份验证+完整性）</p>
+<p>创建MAP映射表：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conf t</span><br><span class="line">crypto map map名 1 ipsec-isakmp</span><br><span class="line">	match address 100</span><br><span class="line">	set transform-set 传输模式名</span><br><span class="line">	set peer 对方的公网IP</span><br><span class="line">	exit</span><br></pre></td></tr></table></figure>
+
+<p>例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">conf t</span><br><span class="line">crypto map wenmap 1 ipsec-isakmp</span><br><span class="line">	match address 100</span><br><span class="line">	set transform-set wentran</span><br><span class="line">	set peer 200.1.1.2</span><br><span class="line">	exit</span><br><span class="line">crypto map wenmap 2 ipsec-isakmp</span><br><span class="line">	match address 101</span><br><span class="line">	set transform-set wentran</span><br><span class="line">	set peer 150.1.1.2</span><br><span class="line">	exit</span><br></pre></td></tr></table></figure>
+
+<p>将map表应用到外网端口“</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int f0/1（外网端口）</span><br><span class="line">	crypto map map名</span><br><span class="line">	exit</span><br></pre></td></tr></table></figure>
+
+<p>****注意：一个接口只能应用一个map表</p>
+<p>8.查看命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">show crypto isakmp sa 查看第一阶段状态</span><br><span class="line">show crypto ipsec sa 查看第二阶段状态</span><br><span class="line">show crypto isakmp policy 查看第一阶段的策略配置集</span><br><span class="line">show crypto ipsec transform-set 查看第二阶段的策略配置集</span><br></pre></td></tr></table></figure>
+
+<p>9.路由器的工作原理：</p>
+<p>内网–to–外网：路由–NAT–VPN-出去</p>
+<p>在ACL表上做相关配置</p>
+<p>10.远程访问VPN：</p>
+<p>ssl vpn不止提供vpn还提供网页服务，即可以通过浏览器使用服务</p>
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230226143831520.png" alt="image-20230226143831520"></p>
+<p>vpn网关：tcp1723</p>
+<p>端口打开+账号（身份验证）+配地址+nat（200.1）（v1国内）+新建一个vpn连接（软件）</p>
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230226144524462.png" alt="image-20230226144524462"></p>
+<p>一块网卡就够了</p>
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230226144845095.png" alt="image-20230226144845095"></p>
+<p>访问同网段还是优先直连，访问其他一律都是隧道</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/03/07/VPN/" data-id="clexlpz55000bycvfb16nc13x" data-title="" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/03/07/VLAN(Virtual%20LAN)%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/03/07/WEB%E6%9C%8D%E5%8A%A1%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/03/07/%E5%9F%9F/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%EF%BC%882%E5%B1%82%20Data%20Link%20Layer%EF%BC%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88cifs%E5%8D%8F%E8%AE%AE%EF%BC%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 wk<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

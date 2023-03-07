@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>小蛋糕</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="扫描与爆破常见端口号    21 FTP 443 HHTPS    22 SSH 1433 SQL Server   23 Telnet 1521 Oracle   80 HHTP 3389 RDP   25 SMTP 3306 MySql   123456nmap -sP 10.1.1.1&#x2F;24	扫描10.1.1.0整个网段nmap -p 21,23-25,3389 10.1.1.1&#x2F;24 	扫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小蛋糕">
+<meta property="og:url" content="http://example.com/2023/03/07/%E6%89%AB%E6%8F%8F%E4%B8%8E%E7%88%86%E7%A0%B4/index.html">
+<meta property="og:site_name" content="小蛋糕">
+<meta property="og:description" content="扫描与爆破常见端口号    21 FTP 443 HHTPS    22 SSH 1433 SQL Server   23 Telnet 1521 Oracle   80 HHTP 3389 RDP   25 SMTP 3306 MySql   123456nmap -sP 10.1.1.1&#x2F;24	扫描10.1.1.0整个网段nmap -p 21,23-25,3389 10.1.1.1&#x2F;24 	扫">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230119194948609.png">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230119195107128.png">
+<meta property="article:published_time" content="2023-03-07T01:55:58.219Z">
+<meta property="article:modified_time" content="2023-01-19T11:51:51.828Z">
+<meta property="article:author" content="wk">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230119194948609.png">
+  
+    <link rel="alternate" href="/atom.xml" title="小蛋糕" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小蛋糕</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-扫描与爆破" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/03/07/%E6%89%AB%E6%8F%8F%E4%B8%8E%E7%88%86%E7%A0%B4/" class="article-date">
+  <time class="dt-published" datetime="2023-03-07T01:55:58.219Z" itemprop="datePublished">2023-03-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="扫描与爆破"><a href="#扫描与爆破" class="headerlink" title="扫描与爆破"></a>扫描与爆破</h1><p>常见端口号</p>
+<table>
+<thead>
+<tr>
+<th>21</th>
+<th>FTP</th>
+<th>443</th>
+<th>HHTPS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>22</td>
+<td>SSH</td>
+<td>1433</td>
+<td>SQL Server</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Telnet</td>
+<td>1521</td>
+<td>Oracle</td>
+</tr>
+<tr>
+<td>80</td>
+<td>HHTP</td>
+<td>3389</td>
+<td>RDP</td>
+</tr>
+<tr>
+<td>25</td>
+<td>SMTP</td>
+<td>3306</td>
+<td>MySql</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nmap -sP 10.1.1.1/24	扫描10.1.1.0整个网段</span><br><span class="line">nmap -p 21,23-25,3389 10.1.1.1/24 	扫描10.1.1.0整个网段这些端口</span><br><span class="line">nmap -p 21,23 10.1.1.1 -sV		扫描21，23的服务版本</span><br><span class="line">nmap -A 10.1.1.1 全面扫描</span><br><span class="line">nmap -O 10.1.1.1 扫描目标系统版本</span><br><span class="line">nmap -p 21,23 10.1.1.1 -oN e:\result.txt	</span><br></pre></td></tr></table></figure>
+
+<p>九头蛇</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Hydra -l a -p 123 10.1.1.1 telnet</span><br><span class="line">Hydra -l a -P e:\pass.txt 10.1.1.1 telnet</span><br><span class="line">Hydra -l a -P e:\pass.txt 10.1.1.1 rdp</span><br><span class="line">Hydra -l a -P e:\pass.txt 10.1.1.1 smb</span><br><span class="line">Hydra -l a -P e:\pass.txt 10.1.1.1 ftp</span><br><span class="line"></span><br><span class="line">Hydra -L e:\user.txt -P e:\pass.txt 10.1.1.1 rdp</span><br></pre></td></tr></table></figure>
+
+<h2 id="本地破解"><a href="#本地破解" class="headerlink" title="本地破解"></a>本地破解</h2><p>LM密码（微软早期，现已废弃）	NT密码为现在（LM哈希、NT哈希）</p>
+<p>Getpass	从内存中提取密码</p>
+<p>本地暴力破解：</p>
+<p>Pwdump提取sam中的HASH值</p>
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230119194948609.png" alt="image-20230119194948609"></p>
+<p>手工将hash值存储到hash.txt中</p>
+<p>使用saminiside软件进行hash暴力破解</p>
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230119195107128.png" alt="image-20230119195107128"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/03/07/%E6%89%AB%E6%8F%8F%E4%B8%8E%E7%88%86%E7%A0%B4/" data-id="clexlpz59000hycvf14y24n18" data-title="" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/03/07/%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/03/07/%E6%89%B9%E5%A4%84%E7%90%86%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/03/07/%E5%9F%9F/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%EF%BC%882%E5%B1%82%20Data%20Link%20Layer%EF%BC%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88cifs%E5%8D%8F%E8%AE%AE%EF%BC%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 wk<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

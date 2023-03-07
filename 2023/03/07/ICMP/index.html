@@ -4,17 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>New Post | 小蛋糕</title>
+  <title>小蛋糕</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="New Post">
-<meta property="og:url" content="http://example.com/2022/12/03/New-Post/index.html">
+  <meta name="description" content="ICMP网络层 	IP	ARP	ICMP	 ICMP协议： 1.ICMP协议端口号是？ 没有端口号，只有协议号（TCP) 2.ICMP是干什么的 ​	网络探测与回馈机制 ​	1.网络探测 ​	2.路由跟踪 ​	3.错误反馈 ping只是ICMP中的一种，只要发生错误，任何设备有义务向别人发送ICMP回馈 ICMP协议的封装格式：  ICMP头：ICMP类型、代码（类型是3时，代码代表了不同种类的类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小蛋糕">
+<meta property="og:url" content="http://example.com/2023/03/07/ICMP/index.html">
 <meta property="og:site_name" content="小蛋糕">
+<meta property="og:description" content="ICMP网络层 	IP	ARP	ICMP	 ICMP协议： 1.ICMP协议端口号是？ 没有端口号，只有协议号（TCP) 2.ICMP是干什么的 ​	网络探测与回馈机制 ​	1.网络探测 ​	2.路由跟踪 ​	3.错误反馈 ping只是ICMP中的一种，只要发生错误，任何设备有义务向别人发送ICMP回馈 ICMP协议的封装格式：  ICMP头：ICMP类型、代码（类型是3时，代码代表了不同种类的类">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-12-03T09:33:03.000Z">
-<meta property="article:modified_time" content="2022-12-03T09:33:04.009Z">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230203192408867.png">
+<meta property="article:published_time" content="2023-03-07T01:55:58.188Z">
+<meta property="article:modified_time" content="2023-02-03T16:15:41.687Z">
 <meta property="article:author" content="wk">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230203192408867.png">
   
     <link rel="alternate" href="/atom.xml" title="小蛋糕" type="application/atom+xml">
   
@@ -71,33 +75,40 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-New-Post" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-ICMP" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/12/03/New-Post/" class="article-date">
-  <time class="dt-published" datetime="2022-12-03T09:33:03.000Z" itemprop="datePublished">2022-12-03</time>
+    <a href="/2023/03/07/ICMP/" class="article-date">
+  <time class="dt-published" datetime="2023-03-07T01:55:58.188Z" itemprop="datePublished">2023-03-07</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      New Post
-    </h1>
-  
-
-      </header>
-    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <h1 id="ICMP"><a href="#ICMP" class="headerlink" title="ICMP"></a>ICMP</h1><p>网络层 	IP	ARP	ICMP	</p>
+<p>ICMP协议：</p>
+<p>1.ICMP协议端口号是？ 没有端口号，只有协议号（TCP)</p>
+<p>2.ICMP是干什么的</p>
+<p>​	网络探测与回馈机制</p>
+<p>​	1.网络探测</p>
+<p>​	2.路由跟踪</p>
+<p>​	3.错误反馈</p>
+<p>ping只是ICMP中的一种，只要发生错误，任何设备有义务向别人发送ICMP回馈</p>
+<p>ICMP协议的封装格式：</p>
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230203192408867.png" alt="image-20230203192408867"></p>
+<p>ICMP头：ICMP类型、代码（类型是3时，代码代表了不同种类的类型）</p>
+<p>​	ICMP类型字段：</p>
+<p>​		8：ping请求</p>
+<p>​		0：ping应答</p>
+<p>​		3：目标主机不可达（路由器给你道歉发的这个）</p>
+<p>​		11：TTL超时</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/03/New-Post/" data-id="clexlpz5d000qycvf0rmbaqwm" data-title="New Post" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/03/07/ICMP/" data-id="clexlpz520007ycvf2kw96l08" data-title="" class="article-share-link">分享</a>
       
       
       
@@ -107,7 +118,7 @@
     
 <nav id="article-nav">
   
-    <a href="/2023/03/07/DHCP%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%AE%89%E5%85%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2023/03/07/WEB%E6%9C%8D%E5%8A%A1%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
@@ -116,6 +127,11 @@
       </div>
     </a>
   
+  
+    <a href="/2023/03/07/NAT/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title"></div>
+    </a>
   
 </nav>
 
