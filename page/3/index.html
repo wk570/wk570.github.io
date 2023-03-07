@@ -106,7 +106,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/07/FTP%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="clexlpz4z0003ycvf2qvz9tt7" data-title="" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/03/07/FTP%E6%9C%8D%E5%8A%A1%E5%99%A8/" data-id="clexlz0h600049cvf9ujw70rx" data-title="" class="article-share-link">分享</a>
       
       
       
@@ -166,7 +166,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/07/HSRP%E5%8D%8F%E8%AE%AE/" data-id="clexlpz510005ycvf33w0fn2z" data-title="" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/03/07/HSRP%E5%8D%8F%E8%AE%AE/" data-id="clexlz0h700069cvf0n0c1d7w" data-title="" class="article-share-link">分享</a>
       
       
       
@@ -238,7 +238,71 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/07/DNS%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%AE%89%E5%85%A8/" data-id="clexlpz500004ycvf1tin1cgx" data-title="" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/03/07/DNS%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%AE%89%E5%85%A8/" data-id="clexlz0h500039cvf0ygj18x2" data-title="" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-ARP协议" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/03/07/ARP%E5%8D%8F%E8%AE%AE/" class="article-date">
+  <time class="dt-published" datetime="2023-03-07T01:55:58.109Z" itemprop="datePublished">2023-03-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h1><h2 id="广播与广播域概述"><a href="#广播与广播域概述" class="headerlink" title="广播与广播域概述"></a>广播与广播域概述</h2><h3 id="广播与广播域"><a href="#广播与广播域" class="headerlink" title="广播与广播域"></a>广播与广播域</h3><p>广播：将广播地址做为目的地址的数据帧</p>
+<p>广播域：网络中能接收到同一个广播所有节点的集合（广播域越小越好，广播域越大，网络通信效率不断下降）</p>
+<h3 id="MAC地址广播"><a href="#MAC地址广播" class="headerlink" title="MAC地址广播"></a>MAC地址广播</h3><p>广播地址为FF-FF-FF-FF-FF-FF</p>
+<h3 id="IP地址广播"><a href="#IP地址广播" class="headerlink" title="IP地址广播"></a>IP地址广播</h3><p>1.255.255.255.255（全局广播）</p>
+<p>2.广播地址为IP地址网段的广播地址，如192.168.1.255&#x2F;24</p>
+<h2 id="ARP协议概述"><a href="#ARP协议概述" class="headerlink" title="ARP协议概述"></a>ARP协议概述</h2><p>-Address Resolution Protocol,地址解析协议</p>
+<p>-将一个已知的IP地址解析成MAC地址</p>
+<p>-内网协议，不能拿来攻击外网，因为路由器会隔离广播域</p>
+<p><strong>当你认为你的目标ip与自己在同一网段时，你会直接发送arp广播报文，去请求他的mac地址</strong></p>
+<p><strong>判断自己与目标ip不在同一网段，你会发送arp报文，报文里问的不是外网网段的地址，问的是谁是网关，mac地址是___，</strong></p>
+<img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230127112326948.png" alt="image-20230127112326948" style="zoom:50%;" />
+
+<p>windows系统中的ARP命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arp -a //查看ARP缓存表</span><br><span class="line">arp -d //清楚ARP缓存</span><br><span class="line">arp -s //ARP绑定</span><br></pre></td></tr></table></figure>
+
+<p>ARP攻击或欺骗的原理：</p>
+<p>通过发送伪造虚假的ARP报文(广播或单播)，来实现的攻击或欺骗。如虚假报文的mac是伪造的不存在的，实现ARP攻击，结果为中断通信&#x2F;断网；如虚假报文的mac是攻击者自身的mac，实现ARP欺骗，结果可以监听、窃取、篡改、控制流量，但不中断通信！</p>
+<p>ARP协议没有验证机制</p>
+<p>ARP攻击者通过发送虚假伪造的arp报文对受害者进行ARP缓存投毒</p>
+<h2 id="ARP攻击防御："><a href="#ARP攻击防御：" class="headerlink" title="ARP攻击防御："></a>ARP攻击防御：</h2><p>1.静态ARP绑定</p>
+<p>​	手工绑定&#x2F;双向绑定</p>
+<p>windows客户机上：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arp -s 10.1.1.254 00-01-2c-a0-e1-09</span><br><span class="line">arp -a</span><br></pre></td></tr></table></figure>
+
+<p>2.ARP防火墙</p>
+<p>​	自动绑定静态ARP</p>
+<p>​	主动防御（和黑客一样不断发）</p>
+<p>3.硬件级ARP防御</p>
+<p>交换机支持端口做动态ARP绑定（配合DHCP服务器）或做静态ARP绑定</p>
+<p>如：(不同厂家不一样)</p>
+<p>conf t </p>
+<p>ip dhcp snooping 监听dhcp并做绑定</p>
+<p>int range f0&#x2F;1 - 48</p>
+<p>switch(config-range-if)#</p>
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230128141705244.png" alt="image-20230128141705244"></p>
+<p>路由器不转发ARP报文，arp报文不能告诉路由器他要去哪</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/03/07/ARP%E5%8D%8F%E8%AE%AE/" data-id="clexlz0gz00009cvfahurda7h" data-title="" class="article-share-link">分享</a>
       
       
       
@@ -331,71 +395,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/07/ALC/" data-id="clexlpz4t0000ycvfgke37lcv" data-title="" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-ARP协议" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/03/07/ARP%E5%8D%8F%E8%AE%AE/" class="article-date">
-  <time class="dt-published" datetime="2023-03-07T01:55:58.109Z" itemprop="datePublished">2023-03-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h1><h2 id="广播与广播域概述"><a href="#广播与广播域概述" class="headerlink" title="广播与广播域概述"></a>广播与广播域概述</h2><h3 id="广播与广播域"><a href="#广播与广播域" class="headerlink" title="广播与广播域"></a>广播与广播域</h3><p>广播：将广播地址做为目的地址的数据帧</p>
-<p>广播域：网络中能接收到同一个广播所有节点的集合（广播域越小越好，广播域越大，网络通信效率不断下降）</p>
-<h3 id="MAC地址广播"><a href="#MAC地址广播" class="headerlink" title="MAC地址广播"></a>MAC地址广播</h3><p>广播地址为FF-FF-FF-FF-FF-FF</p>
-<h3 id="IP地址广播"><a href="#IP地址广播" class="headerlink" title="IP地址广播"></a>IP地址广播</h3><p>1.255.255.255.255（全局广播）</p>
-<p>2.广播地址为IP地址网段的广播地址，如192.168.1.255&#x2F;24</p>
-<h2 id="ARP协议概述"><a href="#ARP协议概述" class="headerlink" title="ARP协议概述"></a>ARP协议概述</h2><p>-Address Resolution Protocol,地址解析协议</p>
-<p>-将一个已知的IP地址解析成MAC地址</p>
-<p>-内网协议，不能拿来攻击外网，因为路由器会隔离广播域</p>
-<p><strong>当你认为你的目标ip与自己在同一网段时，你会直接发送arp广播报文，去请求他的mac地址</strong></p>
-<p><strong>判断自己与目标ip不在同一网段，你会发送arp报文，报文里问的不是外网网段的地址，问的是谁是网关，mac地址是___，</strong></p>
-<img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230127112326948.png" alt="image-20230127112326948" style="zoom:50%;" />
-
-<p>windows系统中的ARP命令</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arp -a //查看ARP缓存表</span><br><span class="line">arp -d //清楚ARP缓存</span><br><span class="line">arp -s //ARP绑定</span><br></pre></td></tr></table></figure>
-
-<p>ARP攻击或欺骗的原理：</p>
-<p>通过发送伪造虚假的ARP报文(广播或单播)，来实现的攻击或欺骗。如虚假报文的mac是伪造的不存在的，实现ARP攻击，结果为中断通信&#x2F;断网；如虚假报文的mac是攻击者自身的mac，实现ARP欺骗，结果可以监听、窃取、篡改、控制流量，但不中断通信！</p>
-<p>ARP协议没有验证机制</p>
-<p>ARP攻击者通过发送虚假伪造的arp报文对受害者进行ARP缓存投毒</p>
-<h2 id="ARP攻击防御："><a href="#ARP攻击防御：" class="headerlink" title="ARP攻击防御："></a>ARP攻击防御：</h2><p>1.静态ARP绑定</p>
-<p>​	手工绑定&#x2F;双向绑定</p>
-<p>windows客户机上：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arp -s 10.1.1.254 00-01-2c-a0-e1-09</span><br><span class="line">arp -a</span><br></pre></td></tr></table></figure>
-
-<p>2.ARP防火墙</p>
-<p>​	自动绑定静态ARP</p>
-<p>​	主动防御（和黑客一样不断发）</p>
-<p>3.硬件级ARP防御</p>
-<p>交换机支持端口做动态ARP绑定（配合DHCP服务器）或做静态ARP绑定</p>
-<p>如：(不同厂家不一样)</p>
-<p>conf t </p>
-<p>ip dhcp snooping 监听dhcp并做绑定</p>
-<p>int range f0&#x2F;1 - 48</p>
-<p>switch(config-range-if)#</p>
-<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230128141705244.png" alt="image-20230128141705244"></p>
-<p>路由器不转发ARP报文，arp报文不能告诉路由器他要去哪</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/07/ARP%E5%8D%8F%E8%AE%AE/" data-id="clexlpz4x0001ycvf6dqh0d3l" data-title="" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/03/07/ALC/" data-id="clexlz0h300019cvf5rl467iu" data-title="" class="article-share-link">分享</a>
       
       
       
@@ -453,7 +453,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/07/DHCP%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%AE%89%E5%85%A8/" data-id="clexlpz4y0002ycvf66sl6m84" data-title="" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2023/03/07/DHCP%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%AE%89%E5%85%A8/" data-id="clexlz0h400029cvfapry8he7" data-title="" class="article-share-link">分享</a>
       
       
       
@@ -491,7 +491,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/12/03/New-Post/" data-id="clexlpz5d000qycvf0rmbaqwm" data-title="New Post" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2022/12/03/New-Post/" data-id="clexlz0h900089cvf8sbn28gu" data-title="New Post" class="article-share-link">分享</a>
       
       
       
@@ -547,11 +547,11 @@
           </li>
         
           <li>
-            <a href="/2023/03/07/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88cifs%E5%8D%8F%E8%AE%AE%EF%BC%89/">(no title)</a>
+            <a href="/2023/03/07/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2023/03/07/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/">(no title)</a>
+            <a href="/2023/03/07/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88cifs%E5%8D%8F%E8%AE%AE%EF%BC%89/">(no title)</a>
           </li>
         
           <li>
