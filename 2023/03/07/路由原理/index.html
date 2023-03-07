@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>小蛋糕</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="路由原理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小蛋糕">
+<meta property="og:url" content="http://example.com/2023/03/07/%E8%B7%AF%E7%94%B1%E5%8E%9F%E7%90%86/index.html">
+<meta property="og:site_name" content="小蛋糕">
+<meta property="og:description" content="路由原理">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230126141123325.png">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230126174022851.png">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230126174047156.png">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230126180509571.png">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230126190710701.png">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230126190730803.png">
+<meta property="article:published_time" content="2023-03-07T02:26:10.712Z">
+<meta property="article:modified_time" content="2023-03-07T02:20:42.845Z">
+<meta property="article:author" content="wk">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230126141123325.png">
+  
+    <link rel="alternate" href="/atom.xml" title="小蛋糕" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小蛋糕</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-路由原理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/03/07/%E8%B7%AF%E7%94%B1%E5%8E%9F%E7%90%86/" class="article-date">
+  <time class="dt-published" datetime="2023-03-07T02:26:10.712Z" itemprop="datePublished">2023-03-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="路由原理"><a href="#路由原理" class="headerlink" title="路由原理"></a>路由原理</h1><span id="more"></span>
+
+<img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230126141123325.png" alt="image-20230126141123325" style="zoom: 67%;" />
+
+<p>路由：路由器为IP包选择路径的过程（路由表，就像mac地址表）</p>
+<img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230126174022851.png" alt="image-20230126174022851" style="zoom:67%;" />
+
+<img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230126174047156.png" alt="image-20230126174047156" style="zoom:67%;" />
+
+<img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230126180509571.png" alt="image-20230126180509571" style="zoom:67%;" />
+
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230126190710701.png" alt="image-20230126190710701"></p>
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230126190730803.png" alt="image-20230126190730803"></p>
+<h3 id="静态路由（S）"><a href="#静态路由（S）" class="headerlink" title="静态路由（S）"></a>静态路由（S）</h3><p>由管理员手工配置的，是单向的</p>
+<p>缺乏灵活性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Router(config)# ip route 目标网段 子网掩码 下一跳ip</span><br><span class="line">ip route 70.1.1.0 255.255.255.0 20.1.1.2</span><br></pre></td></tr></table></figure>
+
+<h3 id="默认路由"><a href="#默认路由" class="headerlink" title="默认路由"></a>默认路由</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Router(config)# ip route 0.0.0.0 0.0.0.0 下一跳ip</span><br><span class="line">ip route 70.1.1.0 255.255.255.0 20.1.1.2</span><br></pre></td></tr></table></figure>
+
+<h3 id="浮动路由"><a href="#浮动路由" class="headerlink" title="浮动路由"></a>浮动路由</h3><p>在静态或默认路由后加空格+数字（正整数）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ip route 0.0.0.0 0.0.0.0 20.1.1.2</span><br><span class="line">ip route 0.0.0.0 0.0.0.0 20.1.1.2 2</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">do sh ip route 查看路由表</span><br></pre></td></tr></table></figure>
+
+<h2 id="交换与路由对比"><a href="#交换与路由对比" class="headerlink" title="交换与路由对比"></a>交换与路由对比</h2><p>路由工作在网络层</p>
+<ol>
+<li>根据“路由表”转发数据</li>
+<li>路由选择</li>
+<li>路由转发</li>
+<li>ip包头导游</li>
+</ol>
+<p>交换工作在数据链路层</p>
+<ol>
+<li>根据“MAC地址表”转发数据</li>
+<li>硬件转发</li>
+<li>帧头导游</li>
+</ol>
+<h2 id="路由器的工作原理"><a href="#路由器的工作原理" class="headerlink" title="路由器的工作原理"></a>路由器的工作原理</h2><p>1）一个帧到达路由，路由器首先检查目标MAC地址是否自己（广播要解开看看，这里不提），如果不是则丢弃，如果是则解封装并将ip包（345层）送到路由器内部</p>
+<p>2）路由器检查IP包头中的目标IP，并匹配路由表，如果匹配失败则丢弃，并向源IP回馈错误信息，如匹配成功，则将IP包路由到出接口</p>
+<p>3）封装帧，首先将出接口的MAC地址作为源MAC封装好，然后检查ARP缓存表，检查是否有下一跳的MAC地址，如有，将提取并作为目标MAC地址封装到帧中，如没有，则发送ARP广播请求下一跳的MAC。并获取到对方的mac地址，再记录缓存，并封装帧，最后将帧发送出去。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/03/07/%E8%B7%AF%E7%94%B1%E5%8E%9F%E7%90%86/" data-id="clexmqxh1000ofcvfhvo54okg" data-title="" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/03/07/%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/03/07/WEB%E6%9C%8D%E5%8A%A1%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/03/07/%E5%9F%9F/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%89%AB%E6%8F%8F%E4%B8%8E%E7%88%86%E7%A0%B4/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%89%B9%E5%A4%84%E7%90%86%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%EF%BC%882%E5%B1%82%20Data%20Link%20Layer%EF%BC%89/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 wk<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

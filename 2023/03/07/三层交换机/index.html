@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>小蛋糕</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="三层交换机1.三层交换机 &#x3D; 三层路由 + 二层交换机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小蛋糕">
+<meta property="og:url" content="http://example.com/2023/03/07/%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA/index.html">
+<meta property="og:site_name" content="小蛋糕">
+<meta property="og:description" content="三层交换机1.三层交换机 &#x3D; 三层路由 + 二层交换机">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230206212942447.png">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230206221819277.png">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230207140628236.png">
+<meta property="article:published_time" content="2023-03-07T02:26:10.712Z">
+<meta property="article:modified_time" content="2023-03-07T02:20:54.437Z">
+<meta property="article:author" content="wk">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230206212942447.png">
+  
+    <link rel="alternate" href="/atom.xml" title="小蛋糕" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小蛋糕</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-三层交换机" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/03/07/%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA/" class="article-date">
+  <time class="dt-published" datetime="2023-03-07T02:26:10.712Z" itemprop="datePublished">2023-03-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="三层交换机"><a href="#三层交换机" class="headerlink" title="三层交换机"></a>三层交换机</h1><p>1.三层交换机 &#x3D; 三层路由 + 二层交换机</p>
+<span id="more"></span>
+
+<p>2.三层路由引擎是可以关闭或开启的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conf t</span><br><span class="line">ip routing			//开启三层路由</span><br><span class="line">no ip routing		//关闭三层路由</span><br></pre></td></tr></table></figure>
+
+<p>3.三层交换机的优点：</p>
+<p>​	与单臂路由相比：</p>
+<p>​	1）解决了网络瓶颈问题</p>
+<p>​	2）解决了单点故障（虚拟接口不再依赖任何的物理接口）</p>
+<p>​	3）一次路由，永久交换（对一个数据流的第一个帧路由，后面永久交换）</p>
+<p>4.三层交换机上起虚接口（配置VLAN的网关）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int vlan 10</span><br><span class="line"> ip add 10.1.1.254 255.255.255.0</span><br><span class="line"> no shut</span><br><span class="line"> exit</span><br></pre></td></tr></table></figure>
+
+<img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230206212942447.png" alt="image-20230206212942447" style="zoom:67%;" />
+
+<p>5.二层端口升级为三层端口</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int f0/x</span><br><span class="line">	no switchport</span><br><span class="line">	ip add ..</span><br><span class="line">	no shut</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230206221819277.png" alt="image-20230206221819277"></p>
+<p>虚拟路由器也要配路由表，中间交换机是接入层</p>
+<img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230207140628236.png" alt="image-20230207140628236" style="zoom: 33%;" />
+
+<p>汇聚层可以分担核心层的工作量</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/03/07/%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA/" data-id="clexmqxgu000efcvf9zdy4m4d" data-title="" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/03/07/%E5%9F%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/03/07/%E6%89%AB%E6%8F%8F%E4%B8%8E%E7%88%86%E7%A0%B4/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/03/07/%E5%9F%9F/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%89%AB%E6%8F%8F%E4%B8%8E%E7%88%86%E7%A0%B4/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%89%B9%E5%A4%84%E7%90%86%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%EF%BC%882%E5%B1%82%20Data%20Link%20Layer%EF%BC%89/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 wk<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

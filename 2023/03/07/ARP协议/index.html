@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>小蛋糕</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="ARP协议广播与广播域概述广播与广播域">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小蛋糕">
+<meta property="og:url" content="http://example.com/2023/03/07/ARP%E5%8D%8F%E8%AE%AE/index.html">
+<meta property="og:site_name" content="小蛋糕">
+<meta property="og:description" content="ARP协议广播与广播域概述广播与广播域">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230127112326948.png">
+<meta property="og:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230128141705244.png">
+<meta property="article:published_time" content="2023-03-07T02:26:10.672Z">
+<meta property="article:modified_time" content="2023-03-07T02:21:18.916Z">
+<meta property="article:author" content="wk">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/wk428/AppData/Roaming/Typora/typora-user-images/image-20230127112326948.png">
+  
+    <link rel="alternate" href="/atom.xml" title="小蛋糕" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">小蛋糕</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ARP协议" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/03/07/ARP%E5%8D%8F%E8%AE%AE/" class="article-date">
+  <time class="dt-published" datetime="2023-03-07T02:26:10.672Z" itemprop="datePublished">2023-03-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h1><h2 id="广播与广播域概述"><a href="#广播与广播域概述" class="headerlink" title="广播与广播域概述"></a>广播与广播域概述</h2><h3 id="广播与广播域"><a href="#广播与广播域" class="headerlink" title="广播与广播域"></a>广播与广播域</h3><span id="more"></span>
+
+<p>广播：将广播地址做为目的地址的数据帧</p>
+<p>广播域：网络中能接收到同一个广播所有节点的集合（广播域越小越好，广播域越大，网络通信效率不断下降）</p>
+<h3 id="MAC地址广播"><a href="#MAC地址广播" class="headerlink" title="MAC地址广播"></a>MAC地址广播</h3><p>广播地址为FF-FF-FF-FF-FF-FF</p>
+<h3 id="IP地址广播"><a href="#IP地址广播" class="headerlink" title="IP地址广播"></a>IP地址广播</h3><p>1.255.255.255.255（全局广播）</p>
+<p>2.广播地址为IP地址网段的广播地址，如192.168.1.255&#x2F;24</p>
+<h2 id="ARP协议概述"><a href="#ARP协议概述" class="headerlink" title="ARP协议概述"></a>ARP协议概述</h2><p>-Address Resolution Protocol,地址解析协议</p>
+<p>-将一个已知的IP地址解析成MAC地址</p>
+<p>-内网协议，不能拿来攻击外网，因为路由器会隔离广播域</p>
+<p><strong>当你认为你的目标ip与自己在同一网段时，你会直接发送arp广播报文，去请求他的mac地址</strong></p>
+<p><strong>判断自己与目标ip不在同一网段，你会发送arp报文，报文里问的不是外网网段的地址，问的是谁是网关，mac地址是___，</strong></p>
+<img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230127112326948.png" alt="image-20230127112326948" style="zoom:50%;" />
+
+<p>windows系统中的ARP命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arp -a //查看ARP缓存表</span><br><span class="line">arp -d //清楚ARP缓存</span><br><span class="line">arp -s //ARP绑定</span><br></pre></td></tr></table></figure>
+
+<p>ARP攻击或欺骗的原理：</p>
+<p>通过发送伪造虚假的ARP报文(广播或单播)，来实现的攻击或欺骗。如虚假报文的mac是伪造的不存在的，实现ARP攻击，结果为中断通信&#x2F;断网；如虚假报文的mac是攻击者自身的mac，实现ARP欺骗，结果可以监听、窃取、篡改、控制流量，但不中断通信！</p>
+<p>ARP协议没有验证机制</p>
+<p>ARP攻击者通过发送虚假伪造的arp报文对受害者进行ARP缓存投毒</p>
+<h2 id="ARP攻击防御："><a href="#ARP攻击防御：" class="headerlink" title="ARP攻击防御："></a>ARP攻击防御：</h2><p>1.静态ARP绑定</p>
+<p>​	手工绑定&#x2F;双向绑定</p>
+<p>windows客户机上：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arp -s 10.1.1.254 00-01-2c-a0-e1-09</span><br><span class="line">arp -a</span><br></pre></td></tr></table></figure>
+
+<p>2.ARP防火墙</p>
+<p>​	自动绑定静态ARP</p>
+<p>​	主动防御（和黑客一样不断发）</p>
+<p>3.硬件级ARP防御</p>
+<p>交换机支持端口做动态ARP绑定（配合DHCP服务器）或做静态ARP绑定</p>
+<p>如：(不同厂家不一样)</p>
+<p>conf t </p>
+<p>ip dhcp snooping 监听dhcp并做绑定</p>
+<p>int range f0&#x2F;1 - 48</p>
+<p>switch(config-range-if)#</p>
+<p><img src="C:\Users\wk428\AppData\Roaming\Typora\typora-user-images\image-20230128141705244.png" alt="image-20230128141705244"></p>
+<p>路由器不转发ARP报文，arp报文不能告诉路由器他要去哪</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/03/07/ARP%E5%8D%8F%E8%AE%AE/" data-id="clexmqxgg0001fcvfdqzz0c4c" data-title="" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/03/07/ALC/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/03/07/%E5%9F%9F/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%89%AB%E6%8F%8F%E4%B8%8E%E7%88%86%E7%A0%B4/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%89%B9%E5%A4%84%E7%90%86%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/07/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%EF%BC%882%E5%B1%82%20Data%20Link%20Layer%EF%BC%89/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 wk<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
